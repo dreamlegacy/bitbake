@@ -144,6 +144,8 @@ class Git(FetchMethod):
             ud.proto = ud.parm['protocol']
         elif not ud.host:
             ud.proto = 'file'
+        elif 'github.com' in ud.host:
+            ud.proto = 'https'
         else:
             ud.proto = "git"
 
