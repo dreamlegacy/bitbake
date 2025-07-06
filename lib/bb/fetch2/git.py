@@ -128,7 +128,7 @@ class Git(FetchMethod):
             ud.branches[name] = branch
             ud.unresolvedrev[name] = branch
 
-        ud.basecmd = data.getVar("FETCHCMD_git", d, True) or "git -c core.fsyncobjectfiles=0"
+        ud.basecmd = data.getVar("FETCHCMD_git", d, True) or "git"
 
         ud.write_tarballs = ((data.getVar("BB_GENERATE_MIRROR_TARBALLS", d, True) or "0") != "0") or ud.rebaseable
 
